@@ -1,24 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useContext } from "react";
+import "./style/global.scss";
+import SidebarMenu from "./components/SidebarMenu";
+import HeroSection from "./components/HeroSection";
+import AboutMe from "./components/AboutMe";
+import Education from "./components/Education";
+import MyProject from "./components/MyProject";
+import Certificate from "./components/Certificate";
+import Skill from "./components/Skill";
+import Contact from "./components/Contact";
+import SettingApp from "./components/Setting";
+import GlobalStyles from "./style/globalStyles";
+import { ContextApp } from "./context/appContext";
+import { ThemeProvider } from "styled-components";
+import { THEMES } from "./constant/common";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function App() {
+  const { theme, showMenu } = useContext(ContextApp);
+  AOS.init()
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={THEMES[theme].styles}>
+      <GlobalStyles />
+      <div className="wrap__app">
+        
+        <SettingApp />
+        <SidebarMenu />
+        <main style={{marginLeft :  showMenu ? '300px' : 0}} id="main-content">
+          <HeroSection />
+          <AboutMe />
+          <Skill />
+          <Education />
+          <MyProject />
+          <Certificate />
+          <Contact />
+        </main>
+      </div>
+    </ThemeProvider>
   );
 }
 

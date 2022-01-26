@@ -1,0 +1,21 @@
+// Break point
+$huge:1280px;
+$laptop:992px;
+$tablet:768px;
+$mobile:480px;
+
+@mixin mobile { @media (max-width:#{$mobile}){
+    @content;
+}}
+
+@mixin tablet { @media (max-width:#{$tablet}){
+    @content;
+}}
+
+@mixin laptop { @media (max-width:#{$laptop}){
+    @content;
+}}
+
+@mixin huge { @media (max-width:#{$huge}){
+    @content;
+}}
