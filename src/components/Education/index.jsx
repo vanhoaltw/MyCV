@@ -23,7 +23,7 @@ const Education = () => {
                 <div key={key} className="resume-item">
                   <h4>{act?.name}</h4>
                   {act?.time && <h5>{act?.time}</h5>}
-                  <p><em>{act?.description}</em></p>
+                  <p><em>"{act?.description}"</em></p>
                   <ul>
                     <li><IconCompany/>{act?.company}</li>
                     {act?.role && <li><IconRole/>{"  "}{act?.role}</li>}                    
@@ -39,7 +39,7 @@ const Education = () => {
                 <div key={key} className="resume-item">
                   <h4>{act?.name}</h4>
                   <h5>{act?.time}</h5>
-                  <p><em>{act?.description}</em></p>
+                  <p><em>"{act?.description}"</em></p>
                   <ul>
                     <li><IconRole/>{act?.role}</li>
                   </ul>
@@ -55,7 +55,7 @@ const Education = () => {
                 <div className="resume-item" key={key}>
                   <h4>{act?.name} {act?.link && <a target="_blank" href={act?.link}>See website</a>} </h4>
                   <h5>{act?.time}</h5>
-                  <p><em>{act?.description}</em></p>
+                  <p><em>"{act?.description}"</em></p>
                   <ul>
                     <li><IconCompany/>{act?.company}</li>
                     <li><IconRole/>{act?.role}</li>

@@ -109,8 +109,10 @@ export const THEMES = {
     icon: <IconSun />,
     styles: {
       title: "#173b6c",
+      main:"#050d18",
       text:"#333333",
       bg: "#fff",
+      bgSection:"#E8F6EF",
       border:"#173b6c",
       shadow:"0 0 24px 0 rgba(0, 0, 0, 0.12)",
       bgOpacity:'rgba(255, 255, 255, 0.9)'
@@ -121,9 +123,11 @@ export const THEMES = {
     name: "Nen toi",
     icon: <IconMoon />,
     styles: {
-      title:"#F05454",
+      title:"#ea5656",
+      main:"#050d18",
       text: "#DDDDDD",
-      bg: "#222831",
+      bg: "#222222",
+      bgSection:"#2B2B2B",
       border:"#F05454",
       shadow:"0 0 24px 0 rgba(253, 253, 253, 0.05)",
       bgOpacity:'rgba(45, 52, 54,0.9)'

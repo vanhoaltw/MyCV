@@ -5,15 +5,22 @@ const GlobalStyles = createGlobalStyle`
         padding: 0;
         margin:0;
         box-sizing: border-box;
-        font-family: 'Yanone Kaffeesatz', sans-serif;
-font-size: 20px;
-letter-spacing: 2px;
+        font-family: 'Be Vietnam Pro', sans-serif;
+        font-size: 15px;
+        line-height: 19px;
+    }
+    section:not(section:first-child){
+      min-height: 100vh;
+      padding: 5px 0 25px 0;
+      &:nth-child(odd){
+        background-color: ${({theme})=> theme.bgSection};
+      }
     }
     input {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-  }
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+    }
   table {
     border-collapse: collapse;
     border-spacing: 0;
@@ -29,6 +36,7 @@ letter-spacing: 2px;
   }
   .side-bar-menu{
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    background:#050d18;
   }
   #main-content{
     h1,h2,h3,h4,h5,h6,p,label{
@@ -49,10 +57,11 @@ letter-spacing: 2px;
       }
       ul li, a{
         color:${({ theme }) => theme.text};
-        svg{
-          path{
-            fill: ${({ theme }) => theme.text} !important;
-          }
+      }
+      .education{
+        background-color: ${({ theme }) => theme.main};
+        ul li, a, label, p ,h1{
+          color:#fff;
         }
       }
     }

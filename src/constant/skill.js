@@ -10,6 +10,11 @@ import nodejs from '../asset/image/nodejs.png'
 import redux from '../asset/image/redux.png'
 import slack from '../asset/image/slack.png'
 import typescript from '../asset/image/typescript.png'
+import php from '../asset/image/php.png'
+import figma from '../asset/image/figma.png'
+import wordpress from '../asset/image/wordpress.png'
+import bootstrap from '../asset/image/bootstrap.png'
+import mysql from '../asset/image/mysql.png'
 
 const SKILL = [
     {
@@ -18,6 +23,8 @@ const SKILL = [
             {name:'HTML',image:html},
             {name:'CSS',image:css},
             {name:'Javasript',image:javascript},
+            {name:'PHP',image:php},
+            {name:'Bootstrap',image:bootstrap},
             {name:'SCSS',image:scss},
             {name:'ReactJS',image:reactjs},
             {name:'NextJS',image:nextjs},
@@ -29,6 +36,7 @@ const SKILL = [
         title:'Back end',
         skills:[
             {name:'Mongodb',image:mongodb},
+            {name:'Mysql',image:mysql},
             {name:'NodeJS',image:nodejs},
         ]
     },
@@ -37,22 +45,10 @@ const SKILL = [
         skills:[
             {name:'Github',image:github},
             {name:'Slack',image:slack},
+            {name:'Figma',image:figma},
+            {name:'Wordpress',image:wordpress},
         ]
     }
 ]
 
 export default SKILL
-// export const skills = [
-//     {name:'Javasript',image:javascript},
-//     {name:'HTML',image:html},
-//     {name:'CSS',image:css},
-//     {name:'SCSS',image:scss},
-//     {name:'ReactJS',image:reactjs},
-//     {name:'NextJS',image:nextjs},
-//     {name:'Redux',image:redux},
-//     {name:'Typescript',image:typescript},
-//     {name:'NodeJS',image:nodejs},
-//     {name:'Mongodb',image:mongodb},
-//     {name:'Github',image:github},
-//     {name:'Slack',image:slack},
-// ]

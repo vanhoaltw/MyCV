@@ -26,14 +26,17 @@ const Skill = () => {
                 className="skill-wrap mb-3 d-flex flex-wrap flex-row justify-content-center align-items-center"
               >
                 {skill.skills.map((item, key) => (
-                  <img
-                    className="skill-img"
-                    key={key}
-                    src={item.image}
-                    alt={item.name}
-                    height={50}
-                    width={50}
-                  />
+                  <div style={{height:50, width:50}}>
+                    <img
+                      className="skill-img"
+                      key={key}
+                      title={item.name}
+                      src={item.image}
+                      alt={item.name}
+                      height={"100%"}
+                      width={"100%"}
+                    />
+                  </div>
                 ))}
               </div>
             </div>

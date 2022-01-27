@@ -81,7 +81,7 @@ const ROUTES = {
         name:'menuContact',
         href:'contact',
         title:'titleContact',
-        description:'',
+        description:'descriptionContact',
         icon:<IconContact/>,
     },
     FEEDBACK:{

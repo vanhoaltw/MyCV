@@ -44,10 +44,10 @@ body {
   margin-bottom: 35px;
   h1 {
     color: $color-title;
+    font-size: 27px !important;
     position: relative;
-    line-height: 80px;
-    font-size: 35px;
-    font-weight: bold;
+    line-height: 60px;
+    font-weight: 600;
     margin-bottom: 20px;
     &::after {
       content: "";
@@ -71,10 +71,11 @@ body {
   z-index: 9999;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 5px;
   span{
     color: #fff;
-    font-size: 14px;
+    line-height: 10px;
+    font-size: 10px;
   }
   svg {
     height: 15px;
@@ -143,13 +144,13 @@ body {
 .switch__language {
   position: relative;
   display: inline-block;
-  height: 24px;
+  height: 33px;
   span {
     position: absolute;
     top: 5px;
     pointer-events: none;
     font-weight: bold;
-    font-size: 12px;
+    font-size: 9px !important;
     text-transform: uppercase;
     text-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
     width: 50%;
@@ -257,7 +258,6 @@ body {
   z-index: 9997;
   transition: all 0.5s ease;
   padding:15px;
-  background: $bg-side-menu;
   &-close {
     position: relative;
     width: 100%;
@@ -293,36 +293,41 @@ body {
   .profile {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap:15px;
+    margin-top: 25px;
+    & > div:last-child{
+      display: flex;
+      height: 100%;
+      flex-direction: column;
+      justify-content: space-between;
+    }
     img {
-      margin: 15px auto;
       display: block;
       overflow: hidden;
-      height: 100px;
-      width: 100px;
+      height: 110px;
+      width: 110px;
       object-fit: cover;
       object-position: center;
       border: 5px solid $color-main;
     }
     h1 {
-      font-size: 20px;
       margin: 0;
       padding: 0;
-      font-weight: 600;
-      -moz-text-align-last: center;
-      text-align-last: center;
-      font-family: "Poppins", sans-serif;
+      line-height: 0;
       a {
+        font-weight: 500;
         text-decoration: none;
-        font-size: 24px;
+        font-size: 16px;
+        letter-spacing: 1px;
         color: $color-main-light;
       }
     }
     label{
-      font-size: 16px;
+      font-size: 14px;
       color:#fff;
       display: block;
-      margin-top: 5px;
+      margin-top:10px;
       text-align: right;
     }
     .social-links{
@@ -365,6 +370,7 @@ body {
       width: 100%;
       text-align: center;
       position: relative;
+      padding-top: 10px;
       .active {
         svg {
           fill: $color-active-ligth !important;
@@ -392,16 +398,13 @@ body {
     ul > li {
       position: relative;
       white-space: nowrap;
-      padding: 10px 15px;
+      padding: 0 15px;
+      height: 50px;
       a {
         display: flex;
         align-items: center;
         justify-content: flex-start;
         gap: 8%;
-        &:after {
-          transition: all 0.3s ease;
-          transition-delay: 0.3s;
-        }
         span {
           transition: all 0.3s ease;
           color: $color-link;
@@ -422,6 +425,26 @@ body {
             fill: $color-logo-active;
           }
         }
+      }
+    }
+  }
+  .coppyright{
+    position: absolute;
+    top:4px;
+    width:calc(100% - 30px);
+    text-align: right;
+    color: #fff;
+    font-size: 10px;
+    *{
+      transition: .3s ease;
+    }
+    svg{
+      margin-left: 5px;
+    }
+    &:hover{
+      color: #bebebe;
+      svg >path{
+        fill: yellow;
       }
     }
   }
@@ -509,7 +532,7 @@ body {
 .about {
   h3 {
     font-weight: 700;
-    font-size: 26px;
+    font-size: 22px;
   }
   ul {
     list-style: none;
@@ -518,7 +541,7 @@ body {
       margin-bottom: 20px;
       display: flex;
       align-items: center;
-      gap: 5px;
+      gap: 10px;
     }
     strong {
       margin-right: 10px;
@@ -530,23 +553,24 @@ body {
   }
   &__left {
     text-align: center;
+    img{
+      max-height: 450px;
+      border-radius: 8px;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
   }
   .objective {
     label {
-      line-height: 25px;
-    }
-    &:last-child {
+      line-height: 20px;
       margin-top: 10px;
     }
   }
   .education {
     margin-top: 25px;
     border-radius: 15px;
-    padding: 15px;
+    padding-top: 20px;
+    padding-left: 15px;
     width: 100%;
-    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
-      rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
-      rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
     h1 {
       font-size: 20px;
       text-transform: uppercase;
@@ -592,7 +616,7 @@ body {
 --------------------------------------------------------------*/
 .resume {
   &-title {
-    font-size: 26px;
+    font-size: 20px;
     font-weight: 700;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -603,17 +627,17 @@ body {
     position: relative;
     h4 {
       line-height: 18px;
-      font-size: 18px;
+      font-size: 17px;
       font-weight: 600;
       text-transform: uppercase;
       margin-bottom: 10px;
       a {
-        font-size: 14px;
+        font-size: 10px;
         float: right;
       }
     }
     h5 {
-      font-size: 16px;
+      font-size: 13px;
       background: #e4edf9;
       padding: 5px 15px;
       display: inline-block;
@@ -663,8 +687,8 @@ body {
       cursor: pointer;
       display: inline-block;
       padding: 10px 15px 3px 15px;
-      font-size: 16px;
-      font-weight: 400;
+      font-size: 12px;
+      font-weight: 500;
       line-height: 1;
       text-transform: uppercase;
       color: $color-main-light;
@@ -741,14 +765,15 @@ body {
       border-radius: 10px;
     }
     h1{
-      font-size: 25px;
+      font-size: 20px;
       font-weight: 500;
     }
     h2{
-      font-size: 20px;
+      font-size: 16px;
     }
     p,a{
       display: grid;
+      font-size: 14px;
       grid-template-columns: 7%90%;
       align-items: center;
       gap:10px;
@@ -833,6 +858,12 @@ body {
   &-wrap {
     border-radius: 5px;
     padding: 25px;
+    img{
+      object-fit: contain;
+      height: 100%;
+      width: 100%;
+      object-position: center;
+    }
   }
 }
 
@@ -878,99 +909,10 @@ body {
       align-items: flex-start;
     }
   }
-  .php-email-form {
-    width: 100%;
-    padding: 30px;
-    margin: 0 auto;
-    label {
-      padding-bottom: 8px;
-    }
-    input,
-    textarea {
-      border-radius: 0;
-      box-shadow: none;
-      font-size: 14px;
-    }
-    input {
-      height: 44px;
-    }
-    textarea {
-      padding: 10px 15px;
-    }
-    button[type="submit"] {
-      background: #149ddd;
-      border: none;
-      padding: 10px 24px;
-      color: #fff;
-      transition: 0.4s;
-      border-radius: 4px;
-    }
-    button[type="submit"]:hover {
-      background: #37b3ed;
-    }
-    .form-group {
-      padding-bottom: 8px;
-      margin-bottom: 15px;
-    }
-    .validate {
-      display: none;
-      color: red;
-      margin: 0 0 15px 0;
-      font-weight: 400;
-      font-size: 13px;
-    }
-    .error-message {
-      display: none;
-      color: #fff;
-      background: #ed3c0d;
-      text-align: left;
-      padding: 15px;
-      font-weight: 600;
-      br + br {
-        margin-top: 25px;
-      }
-    }
-    .sent-message {
-      display: none;
-      color: #fff;
-      background: #18d26e;
-      text-align: center;
-      padding: 15px;
-      font-weight: 600;
-    }
-    .loading {
-      display: none;
-      background: #fff;
-      text-align: center;
-      padding: 15px;
-      &:before {
-        content: "";
-        display: inline-block;
-        border-radius: 50%;
-        width: 24px;
-        height: 24px;
-        margin: 0 10px -6px 0;
-        border: 3px solid #18d26e;
-        border-top-color: #eee;
-        -webkit-animation: animate-loading 1s linear infinite;
-        animation: animate-loading 1s linear infinite;
-      }
-    }
-  }
-  @-webkit-keyframes animate-loading {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-  @keyframes animate-loading {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
+  .contact__right{
+    svg{
+      width: 80%;
+      height: 80%;
     }
   }
   @include tablet {

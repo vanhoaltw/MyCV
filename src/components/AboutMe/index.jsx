@@ -74,14 +74,14 @@ const AboutMe = () => {
 
             <div className="objective">
               <label>
-                <strong>{t("about-objective-short")}</strong>
+                <strong>{t("about-objective-short")}: </strong>
               </label>
               <p>{t("about-objective-short-content")}</p>
             </div>
 
             <div className="objective">
               <label>
-                <strong>{t("about-objective-long")}</strong>
+                <strong>{t("about-objective-long")}: </strong>
               </label>
               <p>{t("about-objective-long-content")}</p>
             </div>

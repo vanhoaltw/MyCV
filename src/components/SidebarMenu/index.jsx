@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 import { ADMIN } from "../../constant/common";
 import { MENU_ROUTES, SOCIAL_ROUTES } from "../../constant/routes";
 import { ReactComponent as IconArrow } from "../../asset/icons/IconArrow.svg";
+import { ReactComponent as IconHeart } from "../../asset/icons/IconHeart.svg";
 
 import { ContextApp } from "../../context/appContext";
 import CountViewer from "../common/CountViewer";
@@ -18,7 +19,7 @@ const SidebarMenu = () => {
   useEffect(() => {
     setTimeout(() => {
       const sidebarItem = sidebarRef.current.querySelector(".nav-link");
-      indicatorRef.current.style.height = `${sidebarItem.clientHeight + 20}px`;
+      indicatorRef.current.style.height = `${sidebarItem.clientHeight + 21}px`;
     }, 50);
   }, []);
 
@@ -83,8 +84,8 @@ const SidebarMenu = () => {
               className="nav-menu-indicator"
               style={{
                 transform: `translateX(-60%)  translateY(${
-                  activeIndex > -1 ? activeIndex * 100 : 1
-                }%)`,
+                  activeIndex > -1 ? (activeIndex * 50 ) : 1
+                }px)`,
               }}
             ></div>
             {Object.keys(MENU_ROUTES).map((item, key) => (
@@ -103,7 +104,11 @@ const SidebarMenu = () => {
             ))}
           </ul>
         </nav>
+
       </div>
+        <div className="coppyright">
+          {t(ADMIN.NAME)} design with <IconHeart/>
+        </div>
     </header>
   );
 };

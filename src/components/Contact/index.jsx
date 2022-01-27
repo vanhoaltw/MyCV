@@ -9,7 +9,7 @@ import { ReactComponent as IconLocation } from "../../asset/icons/location.svg";
 import { ReactComponent as IconEmail } from "../../asset/icons/email.svg";
 import { ReactComponent as IconPhone } from "../../asset/icons/phone.svg";
 import { useTranslation } from "react-i18next";
-import ImageBye from "../../asset/image/bye.gif";
+import {ReactComponent as ContactImage} from "../../asset/icons/ContactTheme.svg";
 
 const Contact = () => {
   const { t } = useTranslation();
@@ -66,8 +66,8 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="col-lg-7 mt-5 mt-lg-0 d-flex align-items-center justify-content-center">
-            <img src={ImageBye} alt="Bye" style={{ marginLeft: "20px" }} />
+          <div className="col-lg-7 mt-5 mt-lg-0 contact__right d-flex align-items-center justify-content-center">
+            <ContactImage/>
           </div>
         </div>
       </div>
