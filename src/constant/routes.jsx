@@ -10,6 +10,8 @@ import {ReactComponent as IconFacebook} from '../asset/icons/IconFacebook.svg'
 import {ReactComponent as IconLinked} from '../asset/icons/IconLinked.svg'
 import {ReactComponent as IconGithub} from '../asset/icons/IconGithub.svg'
 import {ReactComponent as IconCV} from '../asset/icons/IconCV.svg'
+
+//
 export const SOCIAL_ROUTES = {
     CV:{
         icon:<IconCV/>,
